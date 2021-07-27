@@ -1,0 +1,14 @@
+it('SMS', function(){
+
+    cy.visit('https://dev.devmobo.com/login')
+    cy.get('#email').type('lokzz05000@gmail.com')
+    cy.get('#password').type('Lokesh@52510')
+    cy.get('#loginButton').click()
+    cy.get(':nth-child(12) > .nav-link').click()
+    cy.get('[style="flex: 1 1 0%; flex-direction: row; margin-left: 10px; margin-bottom: 5px; margin-right: 12px;"] > [data-target="#smsAddResidentsModal"]').click()
+    cy.get('tbody > :nth-child(2) > :nth-child(1)').type('Swetha')
+    cy.get('tbody > :nth-child(2) > :nth-child(2)').type('9123456780')
+    cy.get('tbody > :nth-child(2) > :nth-child(3)').type('abc@gmail.com')
+    cy.get('.residentList > div > [text=""]').click()
+
+})   
